@@ -1,0 +1,205 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.col-left{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    width: 16rem;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    // margin-top: 70px;
+    position: relative;
+
+    @media(max-width: 1270px) {
+        &{
+            width: 13rem!important;
+            
+        }
+        
+    }
+    & ul{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, -100%);
+
+        & .btn:hover{
+            background-color: #cdd8d8a6;
+            cursor: pointer;
+        }
+        & .btn{
+            list-style: none;
+            height: 90px;
+            width: 17rem;
+            color: #050505;
+            background-color: #e8eaea;
+            font-size: .9rem;
+            position: relative;
+            box-shadow: 0 5px 10px#777;
+
+        
+            & a{
+                text-decoration: none;
+                color: #050505;
+                
+                & span{
+                    position: absolute;
+                    top: 3.5rem;
+                    width: 100%;
+                    text-align: center;
+                }
+
+                & .inventory::before, .barcode::before, .manage-purchase::before, .return-purchases::before, .suppliers-management::before, .query-screen::before, .manage-sales-invoices::before, .customer-management::before, .return-sales::before, .manage-expenses::before, .cash::before, .notes-alert::before, .employee-management::before, .general-system::before{
+                    content: '';
+                    width: 3rem;
+                    height: 3rem;            
+                    background-size: cover;
+                    position: absolute;
+                    top: 5px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                & .inventory::before{
+                    background-image: url('../imgs/inventory.png');
+                }
+                & .barcode::before{
+                    background-image: url('../imgs/barcode.png');
+                }
+                & .manage-purchase::before{
+                    background-image: url('../imgs/manage-purchase.png');
+                }
+                & .return-purchases::before{
+                    background-image: url('../imgs/return-purchases.png');
+                }
+                & .suppliers-management::before{
+                    background-image: url('../imgs/suppliers-management.png');
+                }
+                & .query-screen::before{
+                    background-image: url('../imgs/query-screen.png');
+                }
+                & .manage-sales-invoices::before{
+                    background-image: url('../imgs/manage-sales-invoices.png');
+                }
+                & .customer-management::before{
+                    background-image: url('../imgs/customer-management.png');
+                }
+                & .return-sales::before{
+                    background-image: url('../imgs/return-sales.png');
+                }
+                & .manage-expenses::before{
+                    background-image: url('../imgs/manage-expenses.png');
+                }
+                & .cash::before{
+                    background-image: url('../imgs/cash.png');
+                }
+                & .notes-alert::before{
+                    background-image: url('../imgs/notes-alert.png');
+                }
+                & .employee-management::before{
+                    background-image: url('../imgs/customer-management.png');
+                }
+                & .general-system::before{
+                    background-image: url('../imgs/general-system.png');
+                }
+            }  
+        }
+    }
+}
+
+.col-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16rem;
+    height: 100%;
+    padding: 0;
+    // margin-top: 70px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e8eaea;
+    overflow-x: hidden;
+
+    & .company-name{
+        & h1{
+            margin: 20px;
+            font-family: monospace;
+        }
+    }
+    & .version{
+        font-size: .7rem;
+        font-weight: 900;
+        margin: 10px;
+    }
+    & ul{
+    
+        // @media(max-width: 1270px) {
+        //     & .btn{
+        //         width: 13rem!important;
+        //     }
+        // }
+        & .btn:hover{
+            background-color: #cdd8d8a6;
+            cursor: pointer;
+        }
+        & .btn{
+            list-style: none;
+            height: 90px;
+            width: 16rem;
+            color: #050505;
+            background-color: #e8eaea;
+            font-size: .9rem;
+            position: relative;
+            box-shadow: 0 0px 5px#777;
+            
+            & a{
+                text-decoration: none;
+                color: #050505;
+                    
+                & span{
+                    position: absolute;
+                    top: 3.5rem;
+                    width: 100%;
+                    text-align: center;
+                }
+                & .system-update::before, .about::before, .support-help-center::before, .license-information::before{
+                    content: '';
+                    width: 3rem;
+                    height: 3rem;            
+                    background-size: cover;
+                    position: absolute;
+                    top: 5px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                & .system-update::before{
+                    background-image: url('../imgs/system-update.png');
+                    background-size: contain !important;
+                    background-repeat: no-repeat;
+                }
+                & .about::before{
+                    background-image: url('../imgs/about.png');
+                }
+                & .support-help-center::before{
+                    background-image: url('../imgs/support-help-center.png');
+                }
+                & .license-information::before{
+                    background-image: url('../imgs/license-information.png');
+                }
+            }
+        }    
+    }
+}
